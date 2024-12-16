@@ -67,18 +67,48 @@ const ProductForm = ({ match, initialProduct }) => {
 
   return (
     <div className='produactForm' >
-      <input type="text" name="name" value={product.name} onChange={handleInputChange} placeholder="Product Name" required />
-      <input type="text" name="category" value={product.category} onChange={handleInputChange} placeholder="Category" required />
-      <input type="text" name="unit" value={product.unit} onChange={handleInputChange} placeholder="Unit" required />
-      <input type="date" name="expiry" value={product.expiry} onChange={handleInputChange} placeholder="Expiry Date" required />
+      <input type="text" 
+      name="name" value={product.name} 
+      onChange={handleInputChange} 
+      placeholder="Product Name" required />
+      <input type="text"
+       name="category"
+        value={product.category} 
+        onChange={handleInputChange} 
+        placeholder="Category" required />
+      <input type="text"
+       name="unit" 
+       value={product.unit} 
+       onChange={handleInputChange} 
+       placeholder="Unit" required />
+      <input type="date" 
+      name="expiry" 
+      value={product.expiry} 
+      onChange={handleInputChange} 
+      placeholder="Expiry Date" 
+      required />
       
       <h2>Materials</h2>
       {product.materials.map((material, index) => (
         <div key={material.id}>
-          <input type="text" name="name" value={material.name} onChange={(e) => handleMaterialChange(index, 'name', e.target.value)} placeholder="Material Name" />
-          <input type="text" name="unit" value={material.unit} onChange={(e) => handleMaterialChange(index, 'unit', e.target.value)} placeholder="Unit" />
-          <input type="number" name="quantity" value={material.quantity} onChange={(e) => handleMaterialChange(index, 'quantity', e.target.value)} placeholder="Quantity" />
-          <input type="number" name="price" value={material.price} onChange={(e) => handleMaterialChange(index, 'price', e.target.value)} placeholder="Price" />
+          <input type="text"
+           name="name" value={material.name} 
+           onChange={(e) => handleMaterialChange(index, 'name', e.target.value)}
+            placeholder="Material Name" />
+          <input type="text"
+           name="unit" 
+           value={material.unit} 
+           onChange={(e) => handleMaterialChange(index, 'unit', e.target.value)}
+            placeholder="Unit" />
+          <input
+           type="number"
+            name="quantity" 
+            value={material.quantity} onChange={(e) => handleMaterialChange(index, 'quantity', e.target.value)} 
+            placeholder="Quantity" />
+          <input
+           type="number"
+            name="price" value={material.price} onChange={(e) => handleMaterialChange(index, 'price', e.target.value)}
+             placeholder="Price" />
           <p>Total: {material.total}</p>
           <p>Tax: {material.tax}</p>
         </div>
