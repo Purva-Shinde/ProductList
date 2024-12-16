@@ -1,0 +1,18 @@
+.produactForm{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+}
+.produactForm input{
+margin:10px
+}
+.produactForm button{
+    margin: 5px;
+    display: flex;
+}
+.btnWrap button{
+    background-color: transparent;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}

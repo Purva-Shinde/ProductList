@@ -1,0 +1,35 @@
+.ProductDadhboard{
+    width: 80%;
+    margin: auto;
+
+
+}
+.ProductDadhboard h1{
+    text-align: center;
+}
+.ProductDadhboard button{
+    text-align: right;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 4px;
+}
+table{
+    width: 100%;
+ }
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+  .btnWrap{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 10px;
+   
+  }
+  .btnWrap a{
+    text-decoration: none;
+
+  }
