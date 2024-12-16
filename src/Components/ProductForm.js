@@ -33,20 +33,16 @@ const ProductForm = ({ match, initialProduct }) => {
   };
 
   const handleMaterialChange = (index, field, value) => {
-    const newMaterials = [...product.materials];
-    newMaterials[index][field] = value;
-  
-     if (field === 'quantity' || field === 'price') {
-      const updatedMaterial = { ...newMaterials[index] };
+    const newMaterials = [...product.materials];  
+    const updatedMaterial = { ...newMaterials[index] };  
+    updatedMaterial[field] = value;  
+      if (field === 'quantity' || field === 'price') {
       updatedMaterial.total = updatedMaterial.quantity * updatedMaterial.price;
-      updatedMaterial.tax = updatedMaterial.total * 0.10;  
-      newMaterials[index] = updatedMaterial;
-  
-       const totalCost = newMaterials.reduce((sum, material) => sum + material.total, 0);
-      setProduct({ ...product, materials: newMaterials, totalCost });
-    } else {
-      setProduct({ ...product, materials: newMaterials });
+      updatedMaterial.tax = updatedMaterial.total * 0.10;
     }
+      newMaterials[index] = updatedMaterial;  
+      const totalCost = newMaterials.reduce((sum, material) => sum + (material.total || 0), 0);
+    setProduct({ ...product, materials: newMaterials, totalCost });
   };
   
 
