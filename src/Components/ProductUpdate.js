@@ -5,7 +5,7 @@ import ProductForm from './ProductForm';
 
 const ProductUpdate = () => {
   const { id } = useParams();
-  const product = useSelector(state => state.products.products.find(p => p.id === parseInt(id)));
+  const product = useSelector(state => state.products.products.find(item => item.id === parseInt(id)));
 
   return (
     <div>
